@@ -1,0 +1,116 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+    height: 5rem;
+    padding: 1rem;
+    font-size: .875rem;
+    line-height: 140%;
+    background-color: var(--gray-500);
+    border: solid 1px var(--gray-400);
+    border-radius: 8px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    line-height: 140%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container:has(input:checked){
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.container input~.checkmark {
+    border-radius: 50%;
+    border: solid 2px var(--blue);
+    transition: .3s border, .3s background;
+}
+
+.container:hover input~.checkmark {
+    border-radius: 50%;
+    background-color: #1e709f4e;
+    border: solid 2px var(--blue-dark);
+}
+
+.container input:checked~.checkmark {
+    border: none;
+    background-color: var(--purple-dark);
+    transition: .3s background;
+}
+
+.container:hover input:checked~.checkmark {
+    border: none;
+    background-color: var(--purple);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 7px;
+    top: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--gray-100);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.task button{
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-left: auto;
+    border-radius: 3px;
+    margin-right: 0;
+    color: var(--gray-300);
+}
+
+.task button:hover{
+    cursor: pointer;
+    background-color: var(--gray-400);
+    color: var(--danger);
+}
