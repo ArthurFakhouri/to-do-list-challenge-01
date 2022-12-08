@@ -1,0 +1,21 @@
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.tasks {
+    width: 46rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .tasks {
+        padding: 0 4px;
+    }
+}

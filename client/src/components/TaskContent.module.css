@@ -1,0 +1,26 @@
+.tasksContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.createdTaskText{
+    color: var(--blue);
+    line-height: 140%;
+}
+
+.taskDoneText{
+    color: var(--purple);
+    float: right;
+    line-height: 140%;
+}
+
+strong > span{
+    background: var(--gray-400);
+    color: var(--gray-200);
+    margin-left: .5rem;
+    padding: 2px 8px;
+    font-size: .75rem;
+    line-height: 140%;
+    border-radius: 8px;
+}
