@@ -18,7 +18,7 @@
 
 Todo List é um projeto simples de controle de tarefas, que foi criado com o intuito de reforçar os conceitos de ReactJS.
 
-Funcionalidades:
+<b>Funcionalidades:</b>
 - Adicionar uma nova tarefa
 - Marcar e desmarcar uma tarefa como concluída
 - Remover uma tarefa da listagem
