@@ -1,0 +1,18 @@
+.content{
+    height: 15.25rem;
+    border-top: solid 1px var(--gray-400);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content div{
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-300);
+    line-height: 140%;
+}
